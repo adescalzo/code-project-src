@@ -1,0 +1,1 @@
+https://antondevtips.com/blog/building-high-performance-dotnet-apps-with-csharp-channels

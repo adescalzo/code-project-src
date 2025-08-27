@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3:*)",
+      "Read(/home/adescalzo/dev/personal/me/extension-get-page/**)",
+      "Read(/home/adescalzo/dev/personal/me/extension-get-page/**)",
+      "Bash(source:*)",
+      "Bash(pip install:*)",
+      "Bash(chmod:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
