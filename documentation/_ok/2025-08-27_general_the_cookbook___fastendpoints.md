@@ -1,0 +1,99 @@
+```yaml
+---
+title: "The Cookbook | FastEndpoints"
+source: https://fast-endpoints.com/docs/the-cookbook#auth
+date_published: unknown
+date_captured: 2025-08-27T23:49:12.246Z
+domain: fast-endpoints.com
+author: Unknown
+category: general
+technologies: [ASP.NET Core, .NET, FastEndpoints, JWT, Swagger, Microsoft Identity API, Blazor Server-Side, Microsoft.AspNetCore.SpaServices.Extensions, Entity Framework Core, Ardalis.Result, ErrorOr, JsonPatch, Scalar, OneOf, TestContainers, xUnit, Asp.Versioning.Http]
+programming_languages: [C#]
+tags: [authentication, authorization, jwt, swagger, aspnet-core, middleware, data-access, testing, validation, api-versioning]
+key_concepts: [JWT authentication, authorization handlers, middleware pipeline, ORM, results pattern, content negotiation, integration testing, API versioning]
+code_examples: false
+difficulty_level: intermediate
+summary: |
+  [This document serves as a "Cookbook" providing a comprehensive collection of practical examples and solutions for common tasks in modern web development, primarily within the FastEndpoints framework. It covers a wide array of topics, including various authentication and authorization schemes like JWT, API Key, and Basic Auth, along with Swagger integration for API documentation. The guide also delves into advanced configuration, middleware pipeline management, data persistence using Entity Framework Core, and different approaches to handling API responses with "Results Patterns." Furthermore, it offers insights into serialization (JSON, XML, JsonPatch), robust testing strategies (unit and integration), input validation, and API versioning. Each entry links to a Gist, providing direct code examples for implementation.]
+---
+```
+
+# The Cookbook | FastEndpoints
+
+# The Cookbook
+
+## Auth
+
+*   [Asymmetric JWT token usage](https://gist.github.com/dj-nitehawk/27550c40475ea528f5c187050fca9fba)
+*   [Standard JWT Auth with Swagger support](https://gist.github.com/dj-nitehawk/3155971da1d2c9553ae6bcb00dfa6f4c)
+*   [Dynamically updating JWT signing key during runtime](https://gist.github.com/dj-nitehawk/65b78b08075fae3070e9d30e2a59f4c1)
+*   [API Key Auth with Swagger support](https://gist.github.com/dj-nitehawk/4efe5ef70f813aec2c55fff3bbb833c0)
+*   [Session based Auth with Swagger support](https://gist.github.com/dj-nitehawk/ef60db792a56afc23537238e79257d13)
+*   [Basic Auth with Swagger support](https://gist.github.com/dj-nitehawk/ef1adfb23f248d936da6fea0ba025f09)
+*   [Dynamic claim/permission hydration (using IClaimsTransformation) instead of embedding in JWT](https://gist.github.com/dj-nitehawk/220363f14e649a2cb850d61f9bd793b5)
+*   [Custom Authorization Handler (IAuthorizationHandler) Example](https://gist.github.com/dj-nitehawk/d2f585747c0711f92ab7c7923f670e29)
+*   [MS Identity API Endpoints middleware config](https://gist.github.com/dj-nitehawk/83a2a863a12f84e65fc4d565657c8673)
+*   [Sending a custom 401 response on Authentication failure](https://gist.github.com/dj-nitehawk/9654ae91808df04abcfd8ec21b373a7b)
+
+## Configuration
+
+*   [Endpoint grouping](https://gist.github.com/dj-nitehawk/5b3e73818f630c2fe90d9f4674847452)
+*   [Registration of additional assemblies for auto type discovery](https://gist.github.com/dj-nitehawk/b3615fad393beabefe929e3f81af6822)
+
+## Middleware & Pipeline
+
+*   [IEndpointFilter usage](https://gist.github.com/dj-nitehawk/3edcd59ce03230b98369e2f2259bc5d3)
+*   [Intercept responses with an IResponseInterceptor](https://gist.github.com/dj-nitehawk/7cef738cf5c0d5a26981524df9228349)
+*   [Intercept responses with the global response modifier](https://gist.github.com/dj-nitehawk/be15f1125cafc4ddd1c233eca26c0a8a)
+*   [Correct middleware order for Blazor Server-Side](https://gist.github.com/dj-nitehawk/171a4228be267ca9312e1ae882ee6d5b)
+*   [Correct middleware order for UseSpa() from Microsoft.AspNetCore.SpaServices.Extensions](https://gist.github.com/dj-nitehawk/bb78ba5dc07c1e20538c046ad7e154c2)
+*   [Legacy host-builder style with Startup.cs file](https://gist.github.com/dj-nitehawk/5d5d325e23c4be43aeccbcb0066a72b4)
+
+## Persistence
+
+*   [Storing IJobStorageRecord, IEventStorageRecord with EF Core](https://gist.github.com/dj-nitehawk/02420788fb0a72c4be4752be8bd4c40b)
+
+## Results Pattern
+
+*   [Usage with Ardalis.Result package](https://gist.github.com/dj-nitehawk/c209274f6bfcc7436d8f463f8ace554a)
+*   [Results pattern with Post-Processor doing the response sending](https://gist.github.com/dj-nitehawk/6e23842dcb7640b165fd80ba57967540)
+*   [Results pattern with ErrorOr package](https://gist.github.com/dj-nitehawk/66cba78a1a3a1e0799d87d67d8aa14bd)
+
+## Serialization
+
+*   [Receiving and sending of XML via custom binder and send method](https://gist.github.com/dj-nitehawk/c66990afc31ed9ad5063402fa295116a)
+*   [Content negotiation example which supports XML and JSON responses](https://gist.github.com/dj-nitehawk/a8a60d7d7d5a1802490c36488857fe10)
+*   [JsonPatch usage with Swagger UI support](https://gist.github.com/dj-nitehawk/842bb52479452fe185f58e385724cac)
+*   [Streaming JSON response with IAsyncEnumerable](https://gist.github.com/dj-nitehawk/8d340c79757d73f2cdb534edf7276cf5)
+
+## Swagger
+
+*   [Customizing Swagger Spec With An IOperationProcessor](https://gist.github.com/dj-nitehawk/d172140b1f7d576e632a0d15e9682f54)
+*   [Customizing Swagger Middleware & SwaggerUi Paths](https://gist.com/dj-nitehawk/ba223a3dd415407a3e664a4a2b61dbc7)
+*   [Api Visualization with Scalar](https://gist.github.com/dj-nitehawk/c7052f01f3f650e67fb6782c84d3b5f0)
+*   [OneOf support for polymorphic schema](https://gist.github.com/dj-nitehawk/8a938ac7edb1ac840ed0601121d557ea)
+
+## Testing
+
+*   [Integration testing with TestContainers & AppFixture](https://gist.github.com/dj-nitehawk/04a78cea10f2239eb81c958c52ec84e0)
+*   [Integration testing an endpoint that publishes an event](https://gist.github.com/dj-nitehawk/ae85c63fefb1e8163fdd37ca6dcb7bfd)
+*   [Unit testing an endpoint that executes a command](https://gist.github.com/dj-nitehawk/f0c5c95c57ac1f1d15c936e9d87734b0)
+*   [Unit testing an endpoint that publishes an event](https://gist.github.com/dj-nitehawk/8ab7bb4ce5b69152b07b9186d7c40e40)
+*   [Forwarding console log messages to xUnit's Message Sink](https://gist.github.com/dj-nitehawk/58c14fd593cf58fa5e8df95cfb9eb549)
+
+## Validation
+
+*   [Adding & Throwing validation errors from deeper domain layers](https://gist.github.com/dj-nitehawk/a3e673479c8f3fb3660cb837f9032031)
+*   [Request DTO inheritance and composition of Validators](https://gist.github.com/dj-nitehawk/f2ba959b92d16cba8265e7c9b9ea957b)
+*   [Validator inheritance for polymorphic DTOs.](https://gist.github.com/dj-nitehawk/d5e5b64f8fdc7ce90656305c6a40174e)
+
+## Versioning
+
+*   [Versioning with Asp.Versioning.Http](https://gist.github.com/dj-nitehawk/fbefbcb6273d372e5e5913accb18ab76)
+*   [Showing deprecated versions in Swagger with built-in versioning](https://gist.github.com/dj-nitehawk/c32e7f887389460c661b955d233b650d)
+
+---
+
+Previous [<- Scaffolding](/docs/scaffolding)
+
+© FastEndpoints 2025
